@@ -1,0 +1,105 @@
+2015-10-16 10:59:36 Error: [Cake\Database\Exception\MissingExtensionException] Database driver Cake\Database\Driver\Postgres cannot be used due to a missing PHP extension or unmet dependency
+Exception Attributes: array (
+  'driver' => 'Cake\\Database\\Driver\\Postgres',
+)
+Stack Trace:
+#0 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Database/Connection.php(107): Cake\Database\Connection->driver('Cake\\Database\\D...', Array)
+#1 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Datasource/ConnectionRegistry.php(76): Cake\Database\Connection->__construct(Array)
+#2 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Core/ObjectRegistry.php(93): Cake\Datasource\ConnectionRegistry->_create('Cake\\Database\\C...', 'default', Array)
+#3 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Datasource/ConnectionManager.php(195): Cake\Core\ObjectRegistry->load('default', Array)
+#4 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/ORM/Locator/TableLocator.php(164): Cake\Datasource\ConnectionManager::get('default')
+#5 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/ORM/TableRegistry.php(109): Cake\ORM\Locator\TableLocator->get('Roles', Array)
+#6 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/bake/src/Shell/Task/ControllerTask.php(116): Cake\ORM\TableRegistry::get('Roles')
+#7 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/bake/src/Shell/Task/ControllerTask.php(65): Bake\Shell\Task\ControllerTask->bake('Roles')
+#8 [internal function]: Bake\Shell\Task\ControllerTask->main('roles')
+#9 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Console/Shell.php(447): call_user_func_array(Array, Array)
+#10 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Console/Shell.php(442): Cake\Console\Shell->runCommand(Array, false)
+#11 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(212): Cake\Console\Shell->runCommand(Array, true, Array)
+#12 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(179): Cake\Console\ShellDispatcher->_dispatch(Array)
+#13 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(126): Cake\Console\ShellDispatcher->dispatch(Array)
+#14 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/bin/cake.php(33): Cake\Console\ShellDispatcher::run(Array)
+#15 {main}
+
+
+2015-10-16 11:05:40 Error: [PDOException] SQLSTATE[08006] [7] could not translate host name "port=" to address: nodename nor servname provided, or not known
+Stack Trace:
+#0 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Database/Driver/PDODriverTrait.php(48): PDO->__construct('pgsql:host=;por...', '', '', Array)
+#1 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Database/Driver/Postgres.php(67): Cake\Database\Driver\Postgres->_connect('pgsql:host=;por...', Array)
+#2 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Database/Schema/BaseSchema.php(45): Cake\Database\Driver\Postgres->connect()
+#3 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Database/Dialect/PostgresDialectTrait.php(165): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Postgres))
+#4 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(52): Cake\Database\Driver\Postgres->schemaDialect()
+#5 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(43): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Database/Connection.php(315): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/ORM/Table.php(422): Cake\Database\Connection->schemaCollection()
+#8 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/bake/src/Shell/Task/TemplateTask.php(288): Cake\ORM\Table->schema()
+#9 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/bake/src/Shell/Task/TemplateTask.php(147): Bake\Shell\Task\TemplateTask->_loadController()
+#10 [internal function]: Bake\Shell\Task\TemplateTask->main('countries')
+#11 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Console/Shell.php(447): call_user_func_array(Array, Array)
+#12 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Console/Shell.php(442): Cake\Console\Shell->runCommand(Array, false)
+#13 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(212): Cake\Console\Shell->runCommand(Array, true, Array)
+#14 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(179): Cake\Console\ShellDispatcher->_dispatch(Array)
+#15 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(126): Cake\Console\ShellDispatcher->dispatch(Array)
+#16 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/bin/cake.php(33): Cake\Console\ShellDispatcher::run(Array)
+#17 {main}
+
+
+2015-10-16 11:13:15 Error: [PDOException] SQLSTATE[08006] [7] could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+	Is the server running on host "localhost" (fe80::1) and accepting
+	TCP/IP connections on port 5432?
+Stack Trace:
+#0 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Database/Driver/PDODriverTrait.php(48): PDO->__construct('pgsql:host=loca...', 'adminzmepikl', 'FGVk2wKXhXxq', Array)
+#1 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Database/Driver/Postgres.php(67): Cake\Database\Driver\Postgres->_connect('pgsql:host=loca...', Array)
+#2 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Database/Schema/BaseSchema.php(45): Cake\Database\Driver\Postgres->connect()
+#3 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Database/Dialect/PostgresDialectTrait.php(165): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Postgres))
+#4 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(52): Cake\Database\Driver\Postgres->schemaDialect()
+#5 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(43): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Database/Connection.php(315): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/ORM/Table.php(422): Cake\Database\Connection->schemaCollection()
+#8 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/bake/src/Shell/Task/TemplateTask.php(288): Cake\ORM\Table->schema()
+#9 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/bake/src/Shell/Task/TemplateTask.php(147): Bake\Shell\Task\TemplateTask->_loadController()
+#10 [internal function]: Bake\Shell\Task\TemplateTask->main('countries')
+#11 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Console/Shell.php(447): call_user_func_array(Array, Array)
+#12 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Console/Shell.php(442): Cake\Console\Shell->runCommand(Array, false)
+#13 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(212): Cake\Console\Shell->runCommand(Array, true, Array)
+#14 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(179): Cake\Console\ShellDispatcher->_dispatch(Array)
+#15 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(126): Cake\Console\ShellDispatcher->dispatch(Array)
+#16 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/bin/cake.php(33): Cake\Console\ShellDispatcher::run(Array)
+#17 {main}
+
+
+2015-10-16 11:13:30 Error: [PDOException] SQLSTATE[08006] [7] could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+	Is the server running on host "localhost" (fe80::1) and accepting
+	TCP/IP connections on port 5432?
+Stack Trace:
+#0 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Database/Driver/PDODriverTrait.php(48): PDO->__construct('pgsql:host=loca...', 'adminzmepikl', 'FGVk2wKXhXxq', Array)
+#1 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Database/Driver/Postgres.php(67): Cake\Database\Driver\Postgres->_connect('pgsql:host=loca...', Array)
+#2 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Database/Schema/BaseSchema.php(45): Cake\Database\Driver\Postgres->connect()
+#3 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Database/Dialect/PostgresDialectTrait.php(165): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Postgres))
+#4 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(52): Cake\Database\Driver\Postgres->schemaDialect()
+#5 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(43): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Database/Connection.php(315): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/ORM/Table.php(422): Cake\Database\Connection->schemaCollection()
+#8 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/bake/src/Shell/Task/TemplateTask.php(288): Cake\ORM\Table->schema()
+#9 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/bake/src/Shell/Task/TemplateTask.php(147): Bake\Shell\Task\TemplateTask->_loadController()
+#10 [internal function]: Bake\Shell\Task\TemplateTask->main('countries')
+#11 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Console/Shell.php(447): call_user_func_array(Array, Array)
+#12 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Console/Shell.php(442): Cake\Console\Shell->runCommand(Array, false)
+#13 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(212): Cake\Console\Shell->runCommand(Array, true, Array)
+#14 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(179): Cake\Console\ShellDispatcher->_dispatch(Array)
+#15 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(126): Cake\Console\ShellDispatcher->dispatch(Array)
+#16 /Users/remidiniz/Google Drive/Work/Dev/Web & App Studio/Projects/StarAd24/StarAd24 - Auth/auth/public/bin/cake.php(33): Cake\Console\ShellDispatcher::run(Array)
+#17 {main}
+
+
